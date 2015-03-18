@@ -54,7 +54,7 @@ class BitCoinService {
         }
         
         let statsUrl = NSURL(string: "https://blockchain.info/stats?format=json")
-        let request = NSURLRequest(URL: statsUrl)
+        let request = NSURLRequest(URL: statsUrl!)
         let task = session.dataTaskWithRequest(request) {[unowned self] data, response, error in
             if error == nil {
                 var jsonError: NSError?
@@ -81,7 +81,7 @@ class BitCoinService {
         }
         
         let pricesUrl = NSURL(string: "https://blockchain.info/charts/market-price?timespan=30days&format=json")
-        let request = NSURLRequest(URL: pricesUrl);
+        let request = NSURLRequest(URL: pricesUrl!);
         let task = session.dataTaskWithRequest(request) {[unowned self] data, response, error in
             if error == nil {
                 var jsonError: NSError?

@@ -37,7 +37,7 @@ public class CurrencyDataViewController: UIViewController, JBLineChartViewDataSo
       var difference: NSNumber?
       if (stats != nil && prices != nil) {
         if let yesterdaysPrice = BitCoinService.sharedInstance.yesterdaysPriceUsingPriceHistory(prices!) {
-          difference = NSNumber.numberWithFloat(stats!.marketPriceUSD.floatValue - yesterdaysPrice.value.floatValue)
+            difference = NSNumber(float:stats!.marketPriceUSD.floatValue - yesterdaysPrice.value.floatValue)
         }
       }
       
@@ -93,7 +93,7 @@ public class CurrencyDataViewController: UIViewController, JBLineChartViewDataSo
   }
   
   public func priceLabelString() -> (String) {
-    return dollarNumberFormatter.stringFromNumber(stats?.marketPriceUSD ?? 0)
+    return dollarNumberFormatter.stringFromNumber(stats?.marketPriceUSD ?? 0)!
   }
   
   public func priceChangeLabelStringAndColor() -> (string: String, color: UIColor) {

@@ -469,6 +469,11 @@
 				TargetAttributes = {
 					07DA61611965E33100E97CC3 = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					07DA61731965E33100E97CC3 = {
 						CreatedOnToolsVersion = 6.0;
@@ -949,6 +954,7 @@
 				FD7B63EA19F13576006FD9B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
