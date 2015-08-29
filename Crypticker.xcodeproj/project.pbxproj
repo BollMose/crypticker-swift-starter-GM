@@ -17,12 +17,6 @@
 		07DA619B1965E3A600E97CC3 /* CryptoCurrencyKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DA619A1965E3A600E97CC3 /* CryptoCurrencyKitTests.swift */; };
 		07DA619E1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
 		07DA619F1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		284799881ABB070C0082D6FC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8331C02C19677E9000FBA23E /* NotificationCenter.framework */; };
-		2847998D1ABB070C0082D6FC /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847998C1ABB070C0082D6FC /* TodayViewController.swift */; };
-		2847998F1ABB070C0082D6FC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2847998E1ABB070C0082D6FC /* MainInterface.storyboard */; };
-		284799921ABB070C0082D6FC /* XTC Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 284799871ABB070C0082D6FC /* XTC Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		284799971ABB0D7F0082D6FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DA616E1965E33100E97CC3 /* Images.xcassets */; };
-		284799981ABB0F1C0082D6FC /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,13 +74,6 @@
 			remoteGlobalIDString = 07DA61881965E3A600E97CC3;
 			remoteInfo = CryptoCurrencyKit;
 		};
-		284799901ABB070C0082D6FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07DA615A1965E33100E97CC3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 284799861ABB070C0082D6FC;
-			remoteInfo = "XTC Widget";
-		};
 		FD7B63E419F13576006FD9B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07DA615A1965E33100E97CC3 /* Project object */;
@@ -122,7 +109,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				FD7B63E619F13576006FD9B4 /* BTC Widget.appex in Embed App Extensions */,
-				284799921ABB070C0082D6FC /* XTC Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,10 +131,6 @@
 		07DA61931965E3A600E97CC3 /* CryptoCurrencyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCurrencyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DA61991965E3A600E97CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07DA619A1965E3A600E97CC3 /* CryptoCurrencyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyKitTests.swift; sourceTree = "<group>"; };
-		284799871ABB070C0082D6FC /* XTC Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "XTC Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2847998B1ABB070C0082D6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2847998C1ABB070C0082D6FC /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		2847998E1ABB070C0082D6FC /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -200,15 +182,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		284799841ABB070C0082D6FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				284799981ABB0F1C0082D6FC /* CryptoCurrencyKit.framework in Frameworks */,
-				284799881ABB070C0082D6FC /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD7B63D819F13576006FD9B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,7 +202,6 @@
 				07DA618A1965E3A600E97CC3 /* CryptoCurrencyKit */,
 				07DA61971965E3A600E97CC3 /* CryptoCurrencyKitTests */,
 				FD7B63DD19F13576006FD9B4 /* BTC Widget */,
-				284799891ABB070C0082D6FC /* XTC Widget */,
 				8331C02B19677E9000FBA23E /* Frameworks */,
 				07DA61631965E33100E97CC3 /* Products */,
 			);
@@ -243,7 +215,6 @@
 				07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */,
 				07DA61931965E3A600E97CC3 /* CryptoCurrencyKitTests.xctest */,
 				FD7B63DB19F13576006FD9B4 /* BTC Widget.appex */,
-				284799871ABB070C0082D6FC /* XTC Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -320,24 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				07DA61991965E3A600E97CC3 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		284799891ABB070C0082D6FC /* XTC Widget */ = {
-			isa = PBXGroup;
-			children = (
-				2847998C1ABB070C0082D6FC /* TodayViewController.swift */,
-				2847998E1ABB070C0082D6FC /* MainInterface.storyboard */,
-				2847998A1ABB070C0082D6FC /* Supporting Files */,
-			);
-			path = "XTC Widget";
-			sourceTree = "<group>";
-		};
-		2847998A1ABB070C0082D6FC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2847998B1ABB070C0082D6FC /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -427,7 +380,6 @@
 				07DA61A11965E3A600E97CC3 /* PBXTargetDependency */,
 				FD7B63E519F13576006FD9B4 /* PBXTargetDependency */,
 				FD7B63E819F13576006FD9B4 /* PBXTargetDependency */,
-				284799911ABB070C0082D6FC /* PBXTargetDependency */,
 			);
 			name = Crypticker;
 			productName = Crypticker;
@@ -489,23 +441,6 @@
 			productReference = 07DA61931965E3A600E97CC3 /* CryptoCurrencyKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		284799861ABB070C0082D6FC /* XTC Widget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 284799951ABB070C0082D6FC /* Build configuration list for PBXNativeTarget "XTC Widget" */;
-			buildPhases = (
-				284799831ABB070C0082D6FC /* Sources */,
-				284799841ABB070C0082D6FC /* Frameworks */,
-				284799851ABB070C0082D6FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "XTC Widget";
-			productName = "XTC Widget";
-			productReference = 284799871ABB070C0082D6FC /* XTC Widget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		FD7B63DA19F13576006FD9B4 /* BTC Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD7B63EB19F13576006FD9B4 /* Build configuration list for PBXNativeTarget "BTC Widget" */;
@@ -551,9 +486,6 @@
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 07DA61881965E3A600E97CC3;
 					};
-					284799861ABB070C0082D6FC = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
 					FD7B63DA19F13576006FD9B4 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
@@ -577,7 +509,6 @@
 				07DA61881965E3A600E97CC3 /* CryptoCurrencyKit */,
 				07DA61921965E3A600E97CC3 /* CryptoCurrencyKitTests */,
 				FD7B63DA19F13576006FD9B4 /* BTC Widget */,
-				284799861ABB070C0082D6FC /* XTC Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -610,15 +541,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		284799851ABB070C0082D6FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2847998F1ABB070C0082D6FC /* MainInterface.storyboard in Resources */,
-				284799971ABB0D7F0082D6FC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,14 +597,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		284799831ABB070C0082D6FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2847998D1ABB070C0082D6FC /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD7B63D719F13576006FD9B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -718,11 +632,6 @@
 			isa = PBXTargetDependency;
 			target = 07DA61881965E3A600E97CC3 /* CryptoCurrencyKit */;
 			targetProxy = 07DA61A91965E3A600E97CC3 /* PBXContainerItemProxy */;
-		};
-		284799911ABB070C0082D6FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 284799861ABB070C0082D6FC /* XTC Widget */;
-			targetProxy = 284799901ABB070C0082D6FC /* PBXContainerItemProxy */;
 		};
 		FD7B63E519F13576006FD9B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -966,34 +875,6 @@
 			};
 			name = Release;
 		};
-		284799931ABB070C0082D6FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "XTC Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		284799941ABB070C0082D6FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "XTC Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		FD7B63E919F13576006FD9B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1067,14 +948,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		284799951ABB070C0082D6FC /* Build configuration list for PBXNativeTarget "XTC Widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				284799931ABB070C0082D6FC /* Debug */,
-				284799941ABB070C0082D6FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 		FD7B63EB19F13576006FD9B4 /* Build configuration list for PBXNativeTarget "BTC Widget" */ = {
 			isa = XCConfigurationList;
