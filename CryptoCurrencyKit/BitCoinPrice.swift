@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class BitCoinPrice : NSObject, NSCoding, Printable {
+public class BitCoinPrice : NSObject, NSCoding {
     public let value :NSNumber
     public let time :NSDate
     override public var description: String {
@@ -36,9 +36,9 @@ public class BitCoinPrice : NSObject, NSCoding, Printable {
         time = NSDate(timeIntervalSince1970: timeInterval)
     }
     
-    public required init(coder aDecoder: NSCoder)  {
-        value = aDecoder.decodeObjectForKey("value") as NSNumber
-        time = aDecoder.decodeObjectForKey("time") as NSDate
+    public required init?(coder aDecoder: NSCoder)  {
+        value = aDecoder.decodeObjectForKey("value") as! NSNumber
+        time = aDecoder.decodeObjectForKey("time") as! NSDate
     }
     
     public func encodeWithCoder(aCoder: NSCoder) {

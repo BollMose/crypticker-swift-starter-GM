@@ -47,7 +47,7 @@ public class CurrencyDataViewController: UIViewController, JBLineChartViewDataSo
   
   public var stats: BitCoinStats?
   
-  public required init(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     dollarNumberFormatter = NSNumberFormatter()
     dollarNumberFormatter.numberStyle = .CurrencyStyle
     dollarNumberFormatter.positivePrefix = ""
@@ -86,7 +86,7 @@ public class CurrencyDataViewController: UIViewController, JBLineChartViewDataSo
   public func updatePriceHistoryLineChart() {
     if let prices = prices {
       let pricesNSArray = prices as NSArray
-      let maxPrice = pricesNSArray.valueForKeyPath("@max.value") as NSNumber
+      let maxPrice = pricesNSArray.valueForKeyPath("@max.value") as! NSNumber
       lineChartView.maximumValue = CGFloat(maxPrice.floatValue * 1.02)
       lineChartView.reloadData()
     }

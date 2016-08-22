@@ -33,7 +33,7 @@ class ViewController: CurrencyDataViewController {
     dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = "EEE M/d"
     
-    super.init(coder: aDecoder)
+    super.init(coder: aDecoder)!
   }
   
   override func viewDidLoad() {

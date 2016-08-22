@@ -57,14 +57,13 @@ class BitCoinService {
         let request = NSURLRequest(URL: statsUrl!)
         let task = session.dataTaskWithRequest(request) {[unowned self] data, response, error in
             if error == nil {
-                var jsonError: NSError?
-                if (jsonError == nil) {
-                    let statsDictionary = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.AllowFragments, error: &jsonError) as NSDictionary
+                    do {
+                    let statsDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.AllowFragments) as! NSDictionary
                     let stats: BitCoinStats = BitCoinStats(fromJSON: JSONValue(statsDictionary))
                     self.cacheStats(stats)
                     completion(stats: stats, error: nil)
-                } else {
-                    completion(stats: nil, error: jsonError)
+                }  catch {
+                    completion(stats: nil, error: nil/* jsonError*/)
                 }
             } else {
                 completion(stats: nil, error: error)
@@ -85,10 +84,10 @@ class BitCoinService {
         let task = session.dataTaskWithRequest(request) {[unowned self] data, response, error in
             if error == nil {
                 var jsonError: NSError?
-                let pricesDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &jsonError) as NSDictionary
-                if (jsonError == nil) {
+                do {
+                let pricesDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
                     let json = JSONValue(pricesDictionary)
-                    let priceValues = pricesDictionary["values"] as Array<NSDictionary>
+                    let priceValues = pricesDictionary["values"] as! Array<NSDictionary>
                     var prices = [BitCoinPrice]()
                     for priceDictionary in priceValues {
                         let price = BitCoinPrice(fromJSON: JSONValue(priceDictionary))
@@ -96,12 +95,11 @@ class BitCoinService {
                     }
                     self.cachePriceHistory(prices)
                     completion(prices: prices, error: nil)
+                }catch {
                     
-                } else {
-                    completion(prices: nil, error: jsonError)
+                    completion(prices: nil, error:nil/* jsonError*/)
                 }
                 
-            } else {
                 completion(prices: nil, error: error)
             }
         }
@@ -112,7 +110,7 @@ class BitCoinService {
     func yesterdaysPriceUsingPriceHistory(priceHistory: Array<BitCoinPrice>) -> (BitCoinPrice?) {
         var yesterdaysPrice: BitCoinPrice?
         
-        for price in priceHistory.reverse() {
+        for price in Array(priceHistory.reverse()) {
             if (price.time.isYesterday()) {
                 yesterdaysPrice = price
                 break;
@@ -151,7 +149,7 @@ class BitCoinService {
     }
     
     func cacheStats(stats: BitCoinStats) {
-        print(stats)
+        print(stats, terminator: "")
         let statsData = NSKeyedArchiver.archivedDataWithRootObject(stats)
         
         NSUserDefaults.standardUserDefaults().setValue(statsData, forKey: statsCacheKey)

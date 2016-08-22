@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class BitCoinStats : NSObject, NSCoding, Printable {
+public class BitCoinStats : NSObject, NSCoding {
     let marketPriceUSD: NSNumber
     let time: NSDate
     override public var description: String {
@@ -37,9 +37,9 @@ public class BitCoinStats : NSObject, NSCoding, Printable {
         
     }
     
-    public required init(coder aDecoder: NSCoder) {
-        marketPriceUSD = aDecoder.decodeObjectForKey("marketPriceUSD") as NSNumber
-        time = aDecoder.decodeObjectForKey("time") as NSDate
+    public required init?(coder aDecoder: NSCoder) {
+        marketPriceUSD = aDecoder.decodeObjectForKey("marketPriceUSD") as! NSNumber
+        time = aDecoder.decodeObjectForKey("time") as! NSDate
     }
     
     public func encodeWithCoder(aCoder: NSCoder)  {
